@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import PublicViewer from "./PublicViewer";
 import Release from "./Release";
 import useViewer from "./useViewer";
-import "./Viewer.css";
 
 
 interface ViewerProps {
@@ -37,6 +36,7 @@ interface ViewerProps {
 
 
 function Viewer(props: ViewerProps) {
+
   const {
     release,
     configuration,
@@ -79,7 +79,7 @@ function Viewer(props: ViewerProps) {
   return (
     <div
       id={divId}
-      className="Viewer"
+      className="relative h-full w-full bg-gradient-to-br from-watch-bg via-[#0e1219] to-[#121820]"
     >
       {renderLoader(state.progress)}
     </div>
